@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<MarioConfig>
+	<BonusStack>
+		<Amount>100</Amount>
+		<Amount>200</Amount>
+		<Amount>400</Amount>
+		<Amount>500</Amount>
+		<Amount>800</Amount>
+		<Amount>1000</Amount>
+		<Amount>2000</Amount>
+		<Amount>5000</Amount>
+	</BonusStack>
+	<KonamiCode>
+		<Key>move_up</Key>
+		<Key>move_up</Key>
+		<Key>move_down</Key>
+		<Key>move_down</Key>
+		<Key>move_left</Key>
+		<Key>move_right</Key>
+		<Key>move_left</Key>
+		<Key>move_right</Key>
+		<Key>button_1</Key>
+		<Key>button_2</Key>
+	</KonamiCode>
+</MarioConfig>

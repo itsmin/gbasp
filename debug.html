@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+	<TITLE>GBA SP Classic in CSS</TITLE>
+	<meta name="viewport" content="width=320" />
+	<link rel="stylesheet" type="text/css" href="iphone.css"/>
+</HEAD>
+
+<BODY>
+
+<div id="container">
+  <div id="canvas">
+  
+  
+    <div class="gbasp">
+      <div class="screen">
+        <div class="bezel">
+          <div class="lcd">
+			
+			<!-- BEGIN EFFECT GAMES INSERT -->
+			<div style="position:absolute; width:512px; height:480px; -webkit-transform-origin:45px 0px; -webkit-transform:scale(0.25);">
+            	<!-- <script type="text/javascript" src="/effect/api/play.js?game=mariodemo&rev=1.0b&mode=standard"></script> -->
+
+<script type="text/javascript" src="engine/EffectEngine.js"></script>
+<script type="text/javascript" src="mariodemo.js"></script>
+
+				<script language="JavaScript">
+					// Effect.Game.getGameDef().ZoomDefault = 1;
+					el('effect_toolbar').style.display = 'none';
+					
+					function postKeyDown(ch) {
+						// Effect.Game.sendKeyDown, pBD, lxB, GEu, bWv
+						if (Effect.Game.sendKeyDown) Effect.Game.sendKeyDown(ch);
+						else {
+							window.event = {keyCode:ch};
+							if (window.pBD) pBD();
+							else if (window.lxB) lxB();
+							else if (window.GEu) GEu();
+							else if (window.bWv) bWv();
+							else if (window.EQS) EQS();
+							else alert("INCOMPATIBLE EFFECT ENGINE VERSION");
+							delete window.event;
+						}
+					}
+					
+					function postKeyUp(ch) {
+						// Effect.Game.sendKeyUp, Jny, TcR, Fev, wPG
+						if (Effect.Game.sendKeyUp) Effect.Game.sendKeyUp(ch);
+						else {
+							window.event = {keyCode:ch};
+							if (window.Jny) Jny();
+							else if (window.TcR) TcR();
+							else if (window.Fev) Fev();
+							else if (window.wPG) wPG();
+							else if (window.qly) qly();
+							else alert("INCOMPATIBLE EFFECT ENGINE VERSION");
+							delete window.event;
+						}
+					}
+				</script>
+			</div>
+			<!-- END EFFECT GAMES INSERT -->
+			
+          </div>
+          <div class="label">CSS GBA<span class="sp"> SP</span></div>
+        </div>
+      </div>
+      
+    	<div class="controller">
+    	  <ul class="hinge">
+    	    <li></li>
+    	    <li></li>
+    	    <li></li>
+    	  </ul>
+    		<div class="inner">
+    		  <div class="controlpad">
+    		    <div class="outer">
+    		      <div class="dpad_outer">
+    		        <div class="dpad_mask">
+    		          <div class="dpad_corner tl"></div>
+    		          
+						<!-- D-Pad Up -->
+						<div class="dpad_bt up" ontouchstart="postKeyDown(38); stop_event(event);" ontouchend="postKeyUp(38); stop_event(event);" onmousedown="postKeyDown(38); stop_event(event);" onmouseup="postKeyUp(38); stop_event(event);"></div>
+						
+    		          <div class="dpad_corner tr"></div>
+    		          
+						<!-- D-Pad Left -->
+						<div class="dpad_bt left" ontouchstart="postKeyDown(37); stop_event(event);" ontouchend="postKeyUp(37); stop_event(event);" onmousedown="postKeyDown(37); stop_event(event);" onmouseup="postKeyUp(37); stop_event(event);"></div>
+    		          
+						<div class="dpad_inner"></div>
+						
+						<!-- D-Pad Right -->
+    		          	<div class="dpad_bt right" ontouchstart="postKeyDown(39); stop_event(event);" ontouchend="postKeyUp(39); stop_event(event);" onmousedown="postKeyDown(39); stop_event(event);" onmouseup="postKeyUp(39); stop_event(event);"></div>
+
+    		          <div class="dpad_corner bl"></div>
+
+						<!-- D-Pad Down -->
+						<div class="dpad_bt down" ontouchstart="postKeyDown(40); stop_event(event);" ontouchend="postKeyUp(40); stop_event(event);" onmousedown="postKeyDown(40); stop_event(event);" onmouseup="postKeyUp(40); stop_event(event);"></div>
+
+    		          <div class="dpad_corner br"></div>
+    		        </div>
+    		      </div>
+    		    </div>
+    		  </div>
+    		  <div class="startstop">
+    		    <div class="brightness_toggle">
+    		      <div></div>
+    		    </div>
+    		    <ul class="speaker">
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		    </ul>
+    		    <ul>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li></li>
+    		      <li class="buttons">
+    		        <ul>
+        		      <li>
+						
+						<!-- Select Button -->
+        		        <div ontouchstart="postKeyDown(9); stop_event(event);" ontouchend="postKeyUp(9); stop_event(event);" onmousedown="postKeyDown(9); stop_event(event);" onmouseup="postKeyUp(9); stop_event(event);"></div>
+        		      </li>
+        		      <li>
+						
+						<!-- Start Button -->
+        		        <div ontouchstart="postKeyDown(27); stop_event(event);" ontouchend="postKeyUp(27); stop_event(event);" onmousedown="postKeyDown(27); stop_event(event);" onmouseup="postKeyUp(27); stop_event(event);"></div>
+
+        		      </li>
+        		    </ul>
+    		      </li>
+    		    </ul>
+    		  </div>
+    		  <div class="ab">
+    		    <ul>
+    		      <li>
+	
+					<!-- B Button -->
+    		        <div ontouchstart="postKeyDown(90); stop_event(event);" ontouchend="postKeyUp(90); stop_event(event);" onmousedown="postKeyDown(90); stop_event(event);" onmouseup="postKeyUp(90); stop_event(event);"></div>
+
+    		      </li>
+    		      <li>
+					
+					<!-- A Button -->
+    		        <div ontouchstart="postKeyDown(88); stop_event(event);" ontouchend="postKeyUp(88); stop_event(event);" onmousedown="postKeyDown(88); stop_event(event);" onmouseup="postKeyUp(88); stop_event(event);"></div>
+
+    		      </li>
+    		    </ul>
+    		  </div>
+    		</div>
+    	</div>
+    </div>
+    
+    
+  </div>
+
+</div>
+
+</BODY>
+</HTML>
